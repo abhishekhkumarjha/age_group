@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Age Group Display</title>
+</head>
+<body>
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button id="checkAgeButton">Check Age Group</button>
+  <p id="result"></p>
+  <script>
+    document.getElementById("checkAgeButton").addEventListener("click", function() {
+      let age = parseInt(document.getElementById("ageInput").value);
+      let ageGroup = "";
+
+      if (age < 13) {
+        ageGroup = "Child";
+      } else if (age < 20) {
+        ageGroup = "Teenage";
+      } else if (age < 60) {
+        ageGroup = "Young";
+      } else {
+        ageGroup = "Senior Citizen";
+      }
+
+      document.getElementById("result").innerText = ageGroup;
+    });
+  </script>
+</body>
+</html>
